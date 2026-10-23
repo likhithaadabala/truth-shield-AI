@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthShield AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h2>🛡️ TruthShield AI</h2>
+    <p>Check Before You Trust.</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-icon">🛡️</div>
+      <p class="hero-tag">YOUR DIGITAL SAFETY PARTNER</p>
+      <h1>Is Your Message Really True?</h1>
+      <p>
+        Detect suspicious messages, identify potential scams,
+        and protect yourself from online fraud.
+      </p>
+      <a href="#scanner" class="hero-link">Start Scanning ↓</a>
+    </section>
+
+    <section class="scanner" id="scanner">
+      <h2>Message Scanner</h2>
+      <textarea id="message" placeholder="Paste your suspicious message here..."></textarea>
+      <button onclick="checkMessage()">Scan Message</button>
+     <div id="result" aria-live="polite"></div>
+
+<div id="riskProgress" class="risk-progress" hidden>
+  <div class="risk-progress-info">
+    <span>Risk Score</span>
+    <span id="riskPercentage">0%</span>
+  </div>
+
+  <div
+    class="risk-progress-track"
+    role="progressbar"
+    aria-label="Message risk score"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+    id="riskBarTrack"
+  >
+    <div id="riskBar" class="risk-progress-fill"></div>
+  </div>
+</div> 
+    </section>
+
+    <section class="scanner">
+      <h2>Scan History</h2>
+      <button onclick="clearHistory()">Clear History</button>
+      <ul id="history"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>TruthShield AI © 2026 | Stay Safe Online</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
